@@ -1,0 +1,74 @@
+[
+  {
+    "id":1,
+    "name": "SAMAK",
+    "category": "Germany",
+    "description": "A delicious traditional fish dish from Germany.",
+    "price": 350,
+    "image": "./img/pexels-daniela-elena-tentis-118658-262959.jpg"
+  },
+  {
+    "id":2,
+    "name": "Grilled Fish Mashed Potato",
+    "category": "Chinese",
+    "description": "Perfectly grilled fish served with creamy mashed potatoes.",
+    "price": 420,
+    "image": "./img/pexels-maorattias-5192412.jpg"
+  },
+  {
+    "id":3,
+    "name": "L'ATELIER",
+    "category": "Mexico",
+    "description": "A flavorful Mexican dish with rich spices and herbs.",
+    "price": 380,
+    "image": "./img/pexels-rachel-claire-5491005.jpg"
+  },
+  {
+    "id":4,
+    "name": "Grilled Fish",
+    "category": "Chinese",
+    "description": "Classic grilled fish infused with Asian spices.",
+    "price": 300,
+    "image": "./img/pexels-daniela-elena-tentis-118658-262959.jpg"
+  },
+  {
+    "id":5,
+    "name": "Mutton Steak",
+    "category": "Chinese",
+    "description": "Tender, juicy mutton steak cooked to perfection.",
+    "price": 500,
+    "image": "./img/pexels-rachel-claire-5491036.jpg"
+  },
+  {
+    "id":6,
+    "name": "Claypot Chicken Rice",
+    "category": "Chinese",
+    "description": "Traditional claypot rice served with aromatic chicken.",
+    "price": 250,
+    "image": "./img/pexels-fox-58267-32909276.jpg"
+  },
+  {
+    "id":6,
+    "name": "Spicy Beef Ramen",
+    "category": "Japanese",
+    "description": "Hot and spicy ramen topped with tender beef slices.",
+    "price": 280,
+    "image": ".images/Beef Pepper Fry.jpg"
+  },
+  {
+    "id":7,
+    "name": "Pasta Alfredo",
+    "category": "Italian",
+    "description": "Creamy Alfredo pasta made with fresh ingredients.",
+    "price": 320,
+    "image": "./img/pexels-enginakyurt-1438672.jpg"
+  },
+  {
+    "id":8,
+    "name": "Chicken Shawarma",
+    "category": "Arabian",
+    "description": "Juicy shawarma wrapped with garlic sauce and salad.",
+    "price": 200,
+    "image": "./img/pexels-rajesh-tp-1624487.jpg"
+  }
+]

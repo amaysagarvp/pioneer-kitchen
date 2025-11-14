@@ -64,3 +64,78 @@ body {
     font-size: 13px;
     color: #bbb;
 }
+
+/* Contact Section Layout */
+.contact-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* Form Card Style */
+.form-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+.form-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Form Title */
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(212, 65, 12);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styling */
+.custom-form label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.custom-form .form-control {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+}
+
+.custom-form .form-control:focus {
+    border-color: rgb(212, 65, 12);
+    box-shadow: 0 0 5px rgba(212, 65, 12, 0.4);
+}
+
+/* Buttons */
+.submit-btn {
+    background: rgb(212, 65, 12);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    background: darkred;
+}
+
+/* Saved Output Box */
+.output-title {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.output-box {
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 8px;
+    min-height: 40px;
+}
