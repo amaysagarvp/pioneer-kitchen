@@ -1,114 +1,43 @@
-// Helper to get elements
-const el = id => document.getElementById(id);
+// SIMPLE DEMO ACCOUNT
+const realUser = "admin";
+const realPass = "1234";
 
-// Clear messages and optionally inputs
-function clearMessages() {
-  el('signup-error').textContent = '';
-  el('signup-error').className = 'error';
-  el('signin-error').textContent = '';
-  el('signin-error').className = 'error';
-}
+// LOGIN FUNCTION
+function login() {
+  const user = document.getElementById("username").value.trim();
+  const pass = document.getElementById("password").value.trim();
+  const error = document.getElementById("errorMsg");
 
-function clearInputs() {
-  el('newUsername').value = '';
-  el('newPassword').value = '';
-  el('username').value = '';
-  el('password').value = '';
-}
-
-function showSignIn() {
-  clearMessages();
-  clearInputs();
-  el('signup-container').style.display = 'none';
-  el('signin-container').style.display = 'block';
-  el('welcome-container').style.display = 'none';
-  el('username').focus();
-}
-
-function showSignUp() {
-  clearMessages();
-  clearInputs();
-  el('signup-container').style.display = 'block';
-  el('signin-container').style.display = 'none';
-  el('welcome-container').style.display = 'none';
-  el('newUsername').focus();
-}
-
-function showWelcome(username) {
-  clearMessages();
-  el('signup-container').style.display = 'none';
-  el('signin-container').style.display = 'none';
-  el('welcome-container').style.display = 'block';
-  el('welcome').textContent = `Welcome, ${username}!`;
-}
-
-// Sign up
-function signUp() {
-  const username = el('newUsername').value.trim();
-  const password = el('newPassword').value.trim();
-  const errorEl = el('signup-error');
-
-  if (!username || !password) {
-    errorEl.textContent = 'Please fill all fields!';
+  if (!user || !pass) {
+    error.textContent = "Please enter username & password";
     return;
   }
 
-  if (localStorage.getItem(username)) {
-    errorEl.textContent = 'Username already exists!';
-    return;
-  }
-
-  localStorage.setItem(username, password);
-  errorEl.className = 'success';
-  errorEl.textContent = 'Account created successfully!';
-
-  // Switch to sign-in after a short delay so user sees success
-  setTimeout(showSignIn, 800);
-}
-
-// Sign in
-function signIn() {
-  const username = el('username').value.trim();
-  const password = el('password').value.trim();
-  const errorEl = el('signin-error');
-
-  if (!username || !password) {
-    errorEl.textContent = 'Please enter username and password';
-    return;
-  }
-
-  const storedPassword = localStorage.getItem(username);
-  if (storedPassword !== null && storedPassword === password) {
-    localStorage.setItem('currentUser', username);
-    showWelcome(username);
+  if (user === realUser && pass === realPass) {
+    localStorage.setItem("loggedUser", user);
+    window.location.href = "index.html"; // redirect to your real home page
   } else {
-    errorEl.textContent = 'Invalid username or password';
+    error.textContent = "Invalid username or password!";
   }
 }
 
+// LOGOUT FUNCTION
 function logout() {
-  localStorage.removeItem('currentUser');
-  showSignIn();
+  localStorage.removeItem("loggedUser");
+  window.location.reload();
 }
 
-// Event listeners
-window.addEventListener('DOMContentLoaded', () => {
-  // Auto-login if user is already signed in
-  const currentUser = localStorage.getItem('currentUser');
-  if (currentUser) {
-    showWelcome(currentUser);
-  } else {
-    showSignIn();
+// SHOW USERNAME IN NAVBAR
+document.addEventListener("DOMContentLoaded", () => {
+  const loginBtn = document.getElementById("signinBtn");
+  const authArea = document.getElementById("authArea");
+
+  const loggedUser = localStorage.getItem("loggedUser");
+
+  if (loggedUser) {
+    authArea.innerHTML = `
+      <span style="color:white; margin-right:10px;">👤 ${loggedUser}</span>
+      <button class="signBtn" onclick="logout()">Logout</button>
+    `;
   }
-
-  // Buttons and links
-  el('signupBtn').addEventListener('click', signUp);
-  el('signinBtn').addEventListener('click', signIn);
-  el('logoutBtn').addEventListener('click', logout);
-  el('showSignInLink').addEventListener('click', (e) => { e.preventDefault(); showSignIn(); });
-  el('showSignUpLink').addEventListener('click', (e) => { e.preventDefault(); showSignUp(); });
-
-  // Enter key handling for password fields
-  el('newPassword').addEventListener('keydown', (e) => { if (e.key === 'Enter') signUp(); });
-  el('password').addEventListener('keydown', (e) => { if (e.key === 'Enter') signIn(); });
 });

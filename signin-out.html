@@ -1,40 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./sigin-out.css">
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="./sigin-out.css">
 </head>
+
 <body>
-    <!-- sign up section -->
 
-      <div class="container" id="signup-container">
-    <h2>Sign Up</h2>
-    <input type="text" id="newUsername" placeholder="Create username"><br>
-    <input type="password" id="newPassword" placeholder="Create password"><br>
-    <button onclick="signUp()">Sign Up</button>
-    <p id="signup-error"></p>
-    <p>Already have an account? <a onclick="showSignIn()">Sign In</a></p>
-  </div>
+  <div class="login-container">
+    <h2> Login</h2>
 
-  <!-- signin section -->
+<input type="text" id="username" placeholder="Enter Username">
+<input type="password" id="password" placeholder="Enter Password">
+<p id="errorMsg" class="error"></p>
+<button class="signinBtn" onclick="login()">Sign in</button>
 
-    <div class="container" id="signin-container" style="display:none;">
-    <h2>Sign In</h2>
-    <input type="text" id="username" placeholder="Enter username"><br>
-    <input type="password" id="password" placeholder="Enter password"><br>
-    <button onclick="signIn()">Sign In</button>
-    <p id="signin-error"></p>
-    <p>Don’t have an account? <a onclick="showSignUp()">Sign Up</a></p>
-  </div>
-    
-  <!-- welcome section -->
-    <div class="container" id="welcome-container" style="display:none;">
-    <h2 id="welcome"></h2>
-    <button onclick="logout()">Logout</button>
-  </div>
 
-  <script src="./js/sigin-out.js"></script>
+<script src="./js/sigin-out.js"></script>
 </body>
 </html>
