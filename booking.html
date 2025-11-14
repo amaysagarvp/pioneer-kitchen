@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pioneer Kitchen</title>
+  <link rel="stylesheet" href="./booking.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- footer section link -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+  <style>
+    .navbar {
+      background-color: rgb(212, 65, 12);
+    }
+
+    .navbar a {
+      color: wheat !important;
+      letter-spacing: 1px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar a:hover {
+      color: white !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: wheat !important;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .navbar-brand img {
+      width: 40px;
+      height: auto;
+    }
+
+    /* Fix for toggler icon color */
+    .navbar-toggler {
+      border-color: wheat;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='wheat' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">
+        <img src="./images/Alogo.png" alt="Logo"> Pioneer Kitchen
+      </a>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="./index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="./menu.html">MENU</a></li>
+          <li class="nav-item"><a class="nav-link" href="./booking.html">BOOKING</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html">CONTACT</a></li>
+          <li class="nav-item"><a class="nav-link" href="./gallery.html">GALLERY</a></li>
+        </ul>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..">
+        <button>Search</button>
+      </div>
+      <div>
+      </div>
+      <button class="siginBtn">sign in</button>
+    </div>
+    </div>
+  </nav>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- navbar  end  -->
+
+  <!-- chair riservation  strat -->
+
+  <!-- <div class="Seatcontainer">
+      <h1> pioneer kitchen Reservation</h1>
+
+      <div class="datetime">
+        <label for="date">Select Date: </label><br>
+        <input type="date" id="date">
+        <label for="time" >Select Time:</label>
+        <input type="time" id="time">
+      </div>
+      <div class="chair-container" id="chairContainer">
+        </div>
+
+        <div class="info">
+          <p><span class="chair available"></span>Available</p>
+          <p><span class="chair selected"></span>Selected</p>
+          <p><span class="chair reserved"></span>Reserved</p>
+        </div>
+        <button id="reservBtn">Reserve Selected</button> -->
+
+  <div class="Seatcontainer">
+    <h1>Pioneer Kitchen - Reservation</h1>
+
+    <div class="controls">
+      <label>Date:</label>
+      <input type="date" id="date">
+
+      <label>Time Slot:</label>
+      <select id="time"></select>
+    </div>
+
+    <div id="chairContainer" class="chairs"></div>
+
+    <button id="reservBtn">Reserve</button>
+  </div>
+
+  </div>
+
+  <script src="./js/booking.js"></script>
+
+  <!-- chair riservation end -->
+
+
+  <!-- footer section  -->
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Experience the luxury of comfort and the beauty of the sea at Ocean View Hotel. We offer fine dining, cozy
+          rooms, and unforgettable hospitality.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p>Email: FullMoon@gmail.com</p>
+        <p>Phone: +91 8848591011</p>
+        <p>Address: Beach Road, Kozhikode, Kerala</p>
+      </div>
+
+      <div class="footer-section socials">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 FulLMooN Hotel |Designed by AmaySagar </p>
+    </div>
+  </footer>
+  <!-- footer section end -->
+</body>
+
+</html>

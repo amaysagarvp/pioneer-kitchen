@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* logo  */
+
+.container img{
+  width: 100%;
+  height: 200px;
+  /* border-radius: 50px; */
+  object-fit: cover;
+  
+}
+
+/* searchBar */
+.top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+.search-bar{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+  flex: 1;
+}
+.search-bar input{
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.search-bar button{
+  padding: 5px 10px;
+  border: none;
+  background-color: #f4b60a;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* responsive phone - */
+@media(max-width:600px){
+   .top-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+  .search-bar button,.signBtn{
+    width: 100%;
+    font-size: 16px;
+  }
+    .search-bar {
+        flex-direction: column;
+    }
+}
+/* tab  */
+@media(min-width:600px) and (max-width:1024){
+ .signin-btn {
+        padding: 12px 25px;
+        font-size: 17px;
+    }
+}
+/* search bar end */
+
+/* signin section */
+.signBtn{
+  border-radius: 20px;
+  margin-left: 15px;
+  background-color:rgb(169, 58, 14);
+  border: 1px solid white;
+  padding: 5px 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+}
+/* logout section  */
+.logoutBtn{
+  background-color:black;
+  margin-left: 20px;
+  font-weight: bold;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: none;
+}
+
+/* ------ tagline start -------*/
+
+.tagline {
+    background-color: brown;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.mbtn {
+    background-color: brown;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    font-size: 15px;
+}
+.tagline button{
+  padding: 10px;
+  border-radius: 20px;
+}
+.tagline button:hover{
+  color: white;
+  background-color: rgb(2, 33, 2);
+}
+
+/*------- tagline end  ------*/
+
+/* /* /Section heading/ */
+
+ .s2heading {
+   text-align: center;
+   font-size: 25px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+
+/*  section two strat*/
+
+.d-block.w-100 {
+    height: 100vh;
+    object-fit: cover; 
+}
+.carousel-item .active{
+   height: 100vh;
+    object-fit: cover;  
+}
+.carousel-item{
+   height: 100vh;
+    object-fit: cover;  
+}
+
+/* section two end */
+
+
+
+
+
+
+/* ------footer section ------*/
+
+
+.footer {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+  padding: 50px 20px 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section h3 {
+  color: #f4b400;
+  margin-bottom: 15px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.footer-section p,
+.footer-section a {
+  color: #bbb;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #f4b400;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.socials a {
+  color: #f4b400;
+  font-size: 20px;
+  margin-right: 12px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #bbb;
+}
+
+.footer-bottom span {
+  color: #f4b400;
+}
+
+
+/* footer section end */
