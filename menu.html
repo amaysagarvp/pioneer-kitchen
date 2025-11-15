@@ -42,33 +42,51 @@
 </head>
 
 <body>
-  <!-- ✅ Header Section -->
+   <!-- Header Section -->
+
   <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="./index.html">
-        <img src="./images/Alogo.png" alt="Logo"> Pioneer Kitchen
-      </a>
+  <div class="container">
+    
+    <!-- Logo -->
+    <a class="navbar-brand" href="./index.html">
+      <img src="./images/Alogo.png" alt="Logo"> Pioneer Kitchen
+    </a>
 
- 
-      <!-- Hamburger for small screens -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Hamburger Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!-- Navigation Links -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="./index.html">HOME</a></li>
-          <li class="nav-item"><a class="nav-link" href="./menu.html">MENU</a></li>
-          <li class="nav-item"><a class="nav-link" href="./booking.html">BOOKING</a></li>
-          <li class="nav-item"><a class="nav-link" href="./contact.html">CONTACT</a></li>
-          <li class="nav-item"><a class="nav-link" href="./gallery.html">GALLARY</a></li>
-        </ul>
+    <!-- MENU ITEMS -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+      <ul class="navbar-nav me-3">
+        <li class="nav-item"><a class="nav-link" href="./index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="./menu.html">MENU</a></li>
+        <li class="nav-item"><a class="nav-link" href="./booking.html">BOOKING</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contact.html">CONTACT</a></li>
+        <li class="nav-item"><a class="nav-link" href="./gallery.html">GALLERY</a></li>
+      </ul>
+
+      <!-- SEARCH + SIGNIN AREA -->
+      <div class="top-bar d-flex align-items-center gap-2">
+        <div class="search-bar d-flex">
+          <input type="text" id="searchInput" placeholder="Search.." class="form-control">
+          <button id="searchBtn" class="btn btn-light ms-2">Search</button>
+        </div>
+
+        <div id="authArea">
+          <a href="./signin-out.html">
+            <button class="signBtn btn btn-warning ms-2" id="signinBtn">Sign in</button>
+          </a>
+        </div>
       </div>
+      <script src="./js/search.js"></script>
     </div>
-  </nav>
-
+  </div>
+</nav>
+</nav>
   <!-- ✅ Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
@@ -92,10 +110,11 @@
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">gallery</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./gallery.html">gallery</a></li>
+          <li><a href="./booking.html">booking</a></li>
         </ul>
       </div>
 
@@ -124,6 +143,8 @@
   </footer>
 
   <!-- ------footer section end -------->
+   <!-- gignout -->
+<script src="./js/sigin-out.js"></script>
 </body>
 
 </html>

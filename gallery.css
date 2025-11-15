@@ -6,7 +6,81 @@ body {
     padding: 0;
     margin: 0;
 }
+.top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+.search-bar{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+  flex: 1;
+}
+.search-bar input{
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.search-bar button{
+  padding: 5px 10px;
+  border: none;
+  background-color: #f4b60a;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* responsive phone - */
+@media(max-width:600px){
+   .top-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+  .search-bar button,.signBtn{
+    width: 100%;
+    font-size: 16px;
+  }
+    .search-bar {
+        flex-direction: column;
+    }
+}
+/* tab  */
+@media(min-width:600px) and (max-width:1024){
+ .signin-btn {
+        padding: 12px 25px;
+        font-size: 17px;
+    }
+}
+/* search bar end */
 
+/* signin section */
+.signBtn{
+  border-radius: 20px;
+  margin-left: 15px;
+  background-color:rgb(169, 58, 14);
+  border: 1px solid white;
+  padding: 5px 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+}
+/* logout section  */
+.logoutBtn{
+  background-color:black;
+  margin-left: 20px;
+  font-weight: bold;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: none;
+}
 
 /* ------footer section ------*/
 .footer {

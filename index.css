@@ -107,6 +107,24 @@ body {
     color: whitesmoke;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.tagline h3 {
+  animation: fadeSlide 1.5s ease-in-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .mbtn {
     background-color: brown;
